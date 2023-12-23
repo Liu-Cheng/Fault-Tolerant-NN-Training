@@ -16,6 +16,9 @@ Second, instead of restricting the data range of neural network processing, we t
 
 The fault-tolerant approaches are implemented on GPU and compared to other typical fault tolerant approaches including TMR and algorithm based fault tolerant approach. The initial results are also compared as follows.
 
+
+![Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized.](result1.jpg)
+
 <img title="Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized." src="result1.jpg" style="height: 346px; width:396px;"/>
 
 
