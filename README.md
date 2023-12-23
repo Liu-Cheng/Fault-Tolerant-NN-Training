@@ -15,10 +15,10 @@ Second, instead of restricting the data range of neural network processing, we t
 
 
 The fault-tolerant approaches are implemented on GPU and compared to other typical fault tolerant approaches including TMR and algorithm based fault tolerant approach. The initial results are also compared as follows.
+<img title="Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized." src="result1.jpg" style="height: 396px; width:346px;"/>
 
-![alt text](result1.jpg "Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized.")
 
-![alt text](result2.jpg "Comparison of baseline, basic quantization bound, and optimized quantization bound. Resnet18 trained on CIFAR10 is utilized.")
+<img title="Comparison of baseline, basic quantization bound, and optimized quantization bound. Resnet18 trained on CIFAR10 is utilized." src="result2.jpg" style="height: 396px; width:346px;"/>
 
 ## Usage
 To be added soon.
