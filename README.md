@@ -13,6 +13,13 @@ errors pose more negative influence to the overall model accuracy when the value
 
 Second, instead of restricting the data range of neural network processing, we try to fix the computing errors. Basically, the model accuracy drop is mostly attributed to large faulty data values, so we add an additional output filters to ignore exceptional outputs. The threshold that determines whether a data is exceptional can be simply obtained with profiling or sampling. However, it may also filter out some correct data and leads to model accuracy loss, we incorporate the filter with Relu functions widely used in neural networks and learn the threshold along during training such that both fault tolerance and model accuracy can be guaranteed.
 
+
+The fault-tolerant approaches are implemented on GPU and compared to other typical fault tolerant approaches including TMR and algorithm based fault tolerant approach. The initial results are also compared as follows.
+
+![alt text](result1.jpg "Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized.")
+
+![alt text](result2.jpg "Comparison of baseline, basic quantization bound, and optimized quantization bound. Resnet18 trained on CIFAR10 is utilized.")
+
 ## Usage
 To be added soon.
 
