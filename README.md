@@ -18,7 +18,7 @@ The fault-tolerant approaches are implemented on GPU and compared to other typic
 
 
 <img title="Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized." src="result1.jpg" style="height: 346px; width:396px;"/>
-
+<center> Comparison of baseline, TMR, and ABFT. Resnet18 trained on ImageNet is utilized. </center>
 
 <img title="Comparison of baseline, basic quantization bound, and optimized quantization bound. Resnet18 trained on CIFAR10 is utilized." src="result2.jpg" style="height: 303px; width:396px;"/>
 
