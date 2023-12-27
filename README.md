@@ -25,7 +25,28 @@ The fault-tolerant approaches are implemented on GPU and compared to other typic
 <center>Comparison of baseline, basic quantization bound, and optimized quantization bound. Resnet18 trained on CIFAR10 is utilized.</center>
 
 ## Usage
-To be added soon.
+Here is the usage of the program.
+All the different fault-tolerant approaches are integrated in the 
+`experiment.py`. its location is 
+'''shell
+./resnet18_protectexp/experiment.py
+
+
+parser.add_argument("--data", type=str, default='~/dataset/val',
+                    help="path to Dataset")
+
+parser.add_argument("--all", action='store_true')
+parser.add_argument("--policy", type=str, default='Conv2d_Raw', help="protect policy")
+parser.add_argument("--threshold", type=float, default=1e-2, help="threshold argument")
+parser.add_argument("--rate", type=float, default=1e-8, help="bit error rate when FI enabled")
+parser.add_argument("--dump", action='store_true')
+parser.add_argument("--repeat", type=int, default=1, help="repeat experiment times")
+parser.add_argument("--datasize", type=str, default="512", help="128/512/1000/10000")
+parser.add_argument("--genchecksum", action='store_true')
+parser.add_argument("--genthresh", action='store_true') # when gensthresh, also modify code in model.ThreshReLU
+parser.add_argument("--BER", action='store_true')
+parser.add_argument("--act_thresh", action='store_true') # BER test use act thresh
+
 
 
 ## License
