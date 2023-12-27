@@ -29,7 +29,14 @@ Here is the usage of the program.
 All the different fault-tolerant approaches are integrated in file
 `experiment.py`, and its location is `./resnet18_protectexp/experiment.py`.
 
+
 With the following command, you can reset the path of the dataset. Its default dataset path is `~/dataset/val`.
+```shell
+python3 experiment.py --data '/path/to/dataset'
+```
+
+With the following command, you can select the protection approaches inclusing TMR and ABED. Of course, you may also just use the raw computing without any protection.
+
 ```shell
 python3 experiment.py--policy Conv2d Raw --repeat
 ```
@@ -51,7 +58,7 @@ python3 experiment.py--dump
 
 More detailed commands such as ABFT threshold, datasize, and bit error rate can be found in the argument setup code in the `experiment.py` file.
 
-```shell
+```python
 parser.add_argument("--data", type=str, default='', help="path to Dataset")
 parser.add_argument("--all", action='store_true')
 parser.add_argument("--policy", type=str, default='Conv2d_Raw', help="protect policy")
