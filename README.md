@@ -26,15 +26,33 @@ The fault-tolerant approaches are implemented on GPU and compared to other typic
 
 ## Usage
 Here is the usage of the program.
-All the different fault-tolerant approaches are integrated in the 
-`experiment.py`. its location is 
-'''shell
-./resnet18_protectexp/experiment.py
+All the different fault-tolerant approaches are integrated in file
+`experiment.py`, and its location is `./resnet18_protectexp/experiment.py`.
 
+With the following command, you can reset the path of the dataset. Its default dataset path is `~/dataset/val`.
+```shell
+python3 experiment.py--policy Conv2d Raw --repeat
+```
 
-parser.add_argument("--data", type=str, default='~/dataset/val',
-                    help="path to Dataset")
+With the following command, you can invoke TMR protection.
+```shell
+python3 experiment .py--policy protectedConv2d TMR --repeat 5
+```
 
+With the following command, you can invoke ABFT protection.
+```shell
+python3 experiment .py--policy protectedConv2d ABED Recomp --repeat 5Kpython3 experiment .py--policy protectedConv2d ABED Recomp --threshold 1e-4 --repeat 5
+```
+
+With the following command, you can dump events of the errors captured by the fault tolerant approaches.
+```shell 
+python3 experiment.py--dump
+```
+
+More detailed commands such as ABFT threshold, datasize, and bit error rate can be found in the argument setup code in the `experiment.py` file.
+
+```shell
+parser.add_argument("--data", type=str, default='', help="path to Dataset")
 parser.add_argument("--all", action='store_true')
 parser.add_argument("--policy", type=str, default='Conv2d_Raw', help="protect policy")
 parser.add_argument("--threshold", type=float, default=1e-2, help="threshold argument")
@@ -46,8 +64,7 @@ parser.add_argument("--genchecksum", action='store_true')
 parser.add_argument("--genthresh", action='store_true') # when gensthresh, also modify code in model.ThreshReLU
 parser.add_argument("--BER", action='store_true')
 parser.add_argument("--act_thresh", action='store_true') # BER test use act thresh
-
-
+```
 
 ## License
 
